@@ -2,6 +2,7 @@ import type { Express } from "express";
 import type { Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
+import { insertMessageSchema } from "@shared/schema";
 import fs from "fs/promises";
 import path from "path";
 
@@ -9,7 +10,7 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  
+
   // API Route to get the latest prompt
   app.get(api.prompts.getLatest.path, async (req, res) => {
     const prompt = await storage.getLatestPrompt();
@@ -17,6 +18,17 @@ export async function registerRoutes(
       return res.status(404).json({ message: "No prompt found" });
     }
     res.json(prompt);
+  });
+
+  // API Route to save contact messages
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const messageData = insertMessageSchema.parse(req.body);
+      const message = await storage.createMessage(messageData);
+      res.json(message);
+    } catch (error) {
+      res.status(400).json({ message: "Invalid message data" });
+    }
   });
 
   // Seed function to ensure the prompt exists in DB
