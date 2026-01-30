@@ -68,7 +68,7 @@ export function PromptCard({ title, content, className = "" }: PromptCardProps) 
             {title}.md
           </div>
         </div>
-        
+
         <div className="flex items-center space-x-2">
           <button
             onClick={handleCopy}
@@ -77,7 +77,7 @@ export function PromptCard({ title, content, className = "" }: PromptCardProps) 
             <Copy className={`w-3.5 h-3.5 ${copied ? "text-green-500" : ""}`} />
             <span>{copied ? "Copied!" : "Copy Raw"}</span>
           </button>
-          
+
           <button
             onClick={handleDownload}
             className="flex items-center space-x-2 px-3 py-1.5 rounded-md text-xs font-medium text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-all border border-transparent hover:border-secondary/20"
@@ -90,11 +90,11 @@ export function PromptCard({ title, content, className = "" }: PromptCardProps) 
 
       {/* Main Content Area */}
       <div className="bg-background/95 border border-border rounded-b-xl shadow-2xl overflow-hidden relative group">
-        
+
         {/* Neon Glow Effects */}
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/50 to-transparent opacity-50" />
-        
+
         <div className="p-8 md:p-12 overflow-x-auto">
           <article className="prose prose-invert max-w-none">
             <ReactMarkdown
@@ -103,14 +103,14 @@ export function PromptCard({ title, content, className = "" }: PromptCardProps) 
                   const match = /language-(\w+)/.exec(className || "");
                   // @ts-ignore - types conflict for children
                   const isInline = !match && !String(children).includes("\n");
-                  
+
                   return !isInline && match ? (
                     <div className="relative rounded-lg overflow-hidden my-6 border border-border/50 shadow-lg">
                       <div className="absolute top-0 right-0 px-2 py-1 text-[10px] font-mono text-muted-foreground bg-muted/80 rounded-bl backdrop-blur-sm border-l border-b border-border/50">
                         {match[1]}
                       </div>
                       <SyntaxHighlighter
-                        style={vscDarkPlus}
+                        style={vscDarkPlus as any}
                         language={match[1]}
                         PreTag="div"
                         customStyle={{
@@ -120,7 +120,7 @@ export function PromptCard({ title, content, className = "" }: PromptCardProps) 
                           background: "hsl(var(--muted) / 0.5)",
                           fontSize: "0.9rem",
                         }}
-                        {...props}
+                        {...({ ...props, ref: undefined })}
                       >
                         {String(children).replace(/\n$/, "")}
                       </SyntaxHighlighter>
@@ -182,7 +182,7 @@ export function LoadingPromptState() {
             <div className="h-4 bg-muted/20 w-4/6 rounded" />
           </div>
         </div>
-        
+
         {/* Scanning effect */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50 blur-sm animate-[scan_2s_ease-in-out_infinite]" />
       </div>

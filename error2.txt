@@ -1,0 +1,13 @@
+
+> rest-express@1.0.0 check
+> tsc
+
+client/src/components/PromptCard.tsx(113,25): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: SyntaxHighlighterProps): SyntaxHighlighter', gave the following error.
+    Type 'CSSProperties | { [key: string]: CSSProperties; }' is not assignable to type '{ [key: string]: CSSProperties; } | undefined'.
+      Type 'CSSProperties' is not assignable to type '{ [key: string]: CSSProperties; }'.
+        Index signature for type 'string' is missing in type 'Properties<string | number, string & {}>'.
+  Overload 2 of 2, '(props: SyntaxHighlighterProps, context: any): SyntaxHighlighter', gave the following error.
+    Type 'CSSProperties | { [key: string]: CSSProperties; }' is not assignable to type '{ [key: string]: CSSProperties; } | undefined'.
+      Type 'CSSProperties' is not assignable to type '{ [key: string]: CSSProperties; }'.
+        Index signature for type 'string' is missing in type 'Properties<string | number, string & {}>'.
