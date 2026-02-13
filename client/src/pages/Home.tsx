@@ -70,8 +70,8 @@ const Starfield = () => {
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-background/80 backdrop-blur-md border-b border-white/5">
     <div className="text-xl font-bold font-display tracking-wider">
-      <span className="text-white">Pavan</span>
-      <span className="text-primary ml-1">Kumar</span>
+      <span className="text-white">MANJU</span>
+      <span className="text-primary ml-1">D</span>
     </div>
     <div className="hidden md:flex items-center space-x-6 text-xs font-medium tracking-widest text-gray-400">
       {["HOME", "ABOUT", "EDUCATION", "SKILLS", "PROJECTS", "ACHIEVEMENTS", "CONTACT"].map((item) => (

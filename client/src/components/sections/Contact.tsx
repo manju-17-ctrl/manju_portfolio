@@ -116,7 +116,7 @@ export const Contact = () => {
                                 <span className="sr-only">LinkedIn</span>
                                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-white" />
                             </a>
-                            <a href="https://github.com/pavankumar2503-sys" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/10 rounded hover:bg-white/5 transition-colors group">
+                            <a href="https://github.com/manju-17-ctrl" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/10 rounded hover:bg-white/5 transition-colors group">
                                 <span className="sr-only">GitHub</span>
                                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-white" />
                             </a>
