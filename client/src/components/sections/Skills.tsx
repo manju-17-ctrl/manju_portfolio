@@ -6,7 +6,7 @@ export const Skills = () => {
         {
             title: "Programming",
             icon: Code2,
-            skills: ["C", "Python", "Problem Solving"],
+            skills: ["Python (Basics)"],
             color: "text-primary",
             borderColor: "border-primary/20",
             bgHover: "hover:bg-primary/5"
@@ -14,15 +14,15 @@ export const Skills = () => {
         {
             title: "Web Design",
             icon: Layout,
-            skills: ["HTML", "CSS", "JavaScript", "React", "MERN Stack"],
+            skills: ["HTML", "CSS", "Frontend Development"],
             color: "text-secondary",
             borderColor: "border-secondary/20",
             bgHover: "hover:bg-secondary/5"
         },
         {
-            title: "Soft Skills",
+            title: "Languages",
             icon: Brain,
-            skills: ["Analytical Thinking", "Continuous Learning", "Team Collaboration", "Adaptability"],
+            skills: ["English", "Kannada"],
             color: "text-green-400",
             borderColor: "border-green-400/20",
             bgHover: "hover:bg-green-400/5"

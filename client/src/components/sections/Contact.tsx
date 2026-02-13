@@ -79,8 +79,8 @@ export const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-white font-display font-bold text-lg mb-1">Email</h3>
-                                    <a href="mailto:pavanraj.kumar2503@gmail.com" className="text-muted-foreground hover:text-white transition-colors">
-                                        pavanraj.kumar2503@gmail.com
+                                    <a href="mailto:Manju539550560@gmail.com" className="text-muted-foreground hover:text-white transition-colors">
+                                        Manju539550560@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ export const Contact = () => {
                                 <div>
                                     <h3 className="text-white font-display font-bold text-lg mb-1">Phone</h3>
                                     <span className="text-muted-foreground">
-                                        +91 87479 45025
+                                        9741308634
                                     </span>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ export const Contact = () => {
                                 <div>
                                     <h3 className="text-white font-display font-bold text-lg mb-1">Base of Operations</h3>
                                     <span className="text-muted-foreground">
-                                        Mandya District, Karnataka, India
+                                        India, Mysore
                                     </span>
                                 </div>
                             </div>

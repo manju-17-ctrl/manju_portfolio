@@ -27,8 +27,8 @@ export const Hero = () => {
             >
                 <div className="text-6xl md:text-8xl lg:text-9xl font-display font-black tracking-tighter uppercase leading-none"
                     style={{ textShadow: '0 0 50px rgba(214, 0, 255, 0.2)' }}>
-                    <span className="block text-white mb-2">PAVAN</span>
-                    <span className="block text-white mb-2">KUMAR K T</span>
+                    <span className="block text-white mb-2">MANJU</span>
+                    <span className="block text-white mb-2">D</span>
                 </div>
                 <div className="text-2xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary mt-4 tracking-wide">
                     CS STUDENT // SOFTWARE TECHIE

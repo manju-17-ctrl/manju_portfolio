@@ -37,23 +37,21 @@ export const Achievements = () => {
                             <div className="flex-1">
                                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-2 justify-center md:justify-start">
                                     <span className="text-yellow-500 font-bold tracking-widest text-sm border border-yellow-500/30 px-3 py-1 rounded-full bg-yellow-500/5 uppercase">
-                                        1st Runner-up
+                                        Certification
                                     </span>
-                                    <span className="text-muted-foreground font-mono text-sm">Oct 24, 2025</span>
                                 </div>
 
                                 <h3 className="text-3xl font-display font-bold text-white mb-4">
-                                    NMIT Sparklab Designathon 2025
+                                    ETHNOTECH — Python (Basics)
                                 </h3>
 
                                 <p className="text-gray-400 leading-relaxed mb-6">
-                                    Awarded at the National-Level Designathon Event organized by NMIT Sparklab 2K25.
-                                    Designed an innovative model focused on reducing food waste in society through sustainable and technology-driven solutions.
+                                    Certificate of completion for Python Basics. Skilled in developing frontend applications.
                                 </p>
 
                                 <div className="flex items-center gap-2 justify-center md:justify-start text-sm text-yellow-500/80">
                                     <Award className="w-4 h-4" />
-                                    <span>National Level Competition</span>
+                                    <span>Verified Certification</span>
                                 </div>
                             </div>
                         </div>

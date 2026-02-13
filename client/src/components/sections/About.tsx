@@ -3,7 +3,7 @@ import { User, MapPin, Mail, Phone, Gamepad2, Plane, Sprout, BookOpen } from "lu
 
 export const About = () => {
     const interests = [
-        { icon: Gamepad2, label: "Gaming" },
+        { icon: Gamepad2, label: "Kabbaddi" },
         { icon: Plane, label: "Traveling" },
         { icon: Sprout, label: "Farming" },
         { icon: BookOpen, label: "Reading" },
@@ -46,21 +46,21 @@ export const About = () => {
                                 <div className="p-2 bg-primary/10 rounded">
                                     <MapPin className="w-5 h-5 text-primary" />
                                 </div>
-                                <span className="font-mono text-sm tracking-wide">Keremegaladoddi, Mandya district, Karnataka</span>
+                                <span className="font-mono text-sm tracking-wide">India, Mysore</span>
                             </div>
                             <div className="flex items-center gap-4 text-white">
                                 <div className="p-2 bg-primary/10 rounded">
                                     <Mail className="w-5 h-5 text-primary" />
                                 </div>
-                                <a href="mailto:pavanraj.kumar2503@gmail.com" className="font-mono text-sm tracking-wide hover:text-primary transition-colors">
-                                    pavanraj.kumar2503@gmail.com
+                                <a href="mailto:Manju539550560@gmail.com" className="font-mono text-sm tracking-wide hover:text-primary transition-colors">
+                                    Manju539550560@gmail.com
                                 </a>
                             </div>
                             <div className="flex items-center gap-4 text-white">
                                 <div className="p-2 bg-primary/10 rounded">
                                     <Phone className="w-5 h-5 text-primary" />
                                 </div>
-                                <span className="font-mono text-sm tracking-wide">+91 87479 45025</span>
+                                <span className="font-mono text-sm tracking-wide">9741308634</span>
                             </div>
                         </div>
                     </motion.div>

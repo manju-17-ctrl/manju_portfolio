@@ -4,20 +4,12 @@ import { ExternalLink, Github, Database, Activity } from "lucide-react";
 export const Projects = () => {
     const projects = [
         {
-            title: "Pneumonia Detection",
-            date: "11/2025 – Present",
-            description: "Developed a pneumonia detection system using deep learning to classify chest X-ray images as pneumonia or normal. Implemented data preprocessing, model training, and evaluation enabling accurate automated medical image analysis.",
-            tags: ["Python", "TensorFlow", "OpenCV", "Deep Learning", "CNN"],
+            title: "Frontend Application",
+            date: "Project",
+            description: "Developed a responsive frontend application using HTML, CSS, and modern web technologies. Focused on user interface design and experience.",
+            tags: ["HTML", "CSS", "Frontend"],
             icon: Activity,
             color: "from-blue-500 to-cyan-400"
-        },
-        {
-            title: "Cow Database Management System",
-            date: "08/2025 – 09/2025",
-            description: "Built a web-based Cow Database Management System to manage cattle records including health, vaccination, and breeding details. Implemented a responsive React frontend, RESTful APIs, and MongoDB for secure data storage.",
-            tags: ["MERN Stack", "React", "Node.js", "MongoDB", "Express"],
-            icon: Database,
-            color: "from-primary to-purple-400"
         }
     ];
 

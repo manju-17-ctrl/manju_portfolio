@@ -6,17 +6,25 @@ export const Education = () => {
         {
             title: "Bachelor of Engineering [CSE]",
             institution: "Maharaja Institute of Technology, Mysore",
-            period: "08/2023 – Present",
-            location: "Mysuru",
+            period: "2023 – 2025",
+            location: "Mysore",
             score: "CGPA: 8.3",
             current: true
         },
         {
-            title: "Pre-University Course",
-            institution: "HDK PU College Besagarahalli",
-            period: "2021 – 2023",
-            location: "Mandya",
-            score: "Percentage: 86.66%",
+            title: "PUC",
+            institution: "MASVS GURUKULA PRE UNIVERSITY COLLEGE MYSORE",
+            period: "2022 – 2023",
+            location: "Mysore",
+            score: "Percentage: 93.2%",
+            current: false
+        },
+        {
+            title: "S.S.L.C",
+            institution: "Vivekananda English medium bannur",
+            period: "2021",
+            location: "Bannur",
+            score: "Percentage: 87%",
             current: false
         }
     ];
