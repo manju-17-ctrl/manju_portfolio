@@ -112,7 +112,7 @@ export const Contact = () => {
 
                         {/* Social Links (Placeholders based on resume) */}
                         <div className="flex gap-4 mt-12">
-                            <a href="https://www.linkedin.com/in/pavan-kumar-29a9162b7" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/10 rounded hover:bg-white/5 transition-colors group">
+                            <a href="https://www.linkedin.com/in/manju-d-4644832b7/" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/10 rounded hover:bg-white/5 transition-colors group">
                                 <span className="sr-only">LinkedIn</span>
                                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-white" />
                             </a>
