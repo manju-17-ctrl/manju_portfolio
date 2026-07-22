@@ -28,18 +28,26 @@ export const Contact = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            const res = await fetch("/api/contact", {
+            const res = await fetch("https://formsubmit.co/ajax/Manju539550560@gmail.com", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(values),
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    name: values.name,
+                    email: values.email,
+                    message: values.message,
+                    _subject: "New Portfolio Contact Message!"
+                }),
             });
 
             if (!res.ok) throw new Error("Failed to send message");
 
             toast({
                 title: "Message Sent!",
-                description: "Thank you for reaching out. I'll get back to you shortly.",
-                duration: 5000,
+                description: "Thank you for reaching out. Please check your email for the FormSubmit activation link if this is your first time!",
+                duration: 7000,
             });
             form.reset();
         } catch (error) {

@@ -38,17 +38,17 @@ export async function registerRoutes(
 }
 
 async function seedPrompt() {
-  const existing = await storage.getLatestPrompt();
-  if (!existing) {
-    try {
+  try {
+    const existing = await storage.getLatestPrompt();
+    if (!existing) {
       const promptContent = await fs.readFile(path.join(process.cwd(), "DEVELOPMENT_PROMPT.md"), "utf-8");
       await storage.createPrompt({
         title: "Full-Stack AI-Assisted Portfolio Website",
         content: promptContent,
       });
       console.log("Seeded initial prompt from file.");
-    } catch (error) {
-      console.error("Failed to seed prompt:", error);
     }
+  } catch (error) {
+    console.error("Failed to seed prompt (Database might be down):", error);
   }
 }

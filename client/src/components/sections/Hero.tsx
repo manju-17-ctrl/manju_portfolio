@@ -1,5 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight, Terminal, MessageSquare } from "lucide-react";
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export const Hero = () => {
     return (
@@ -26,10 +36,9 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="mb-8"
                 >
-                    <div className="text-6xl md:text-8xl lg:text-9xl font-display font-black tracking-tighter uppercase leading-none"
+                    <div className="text-6xl md:text-8xl lg:text-9xl font-display font-black tracking-tighter uppercase leading-none whitespace-nowrap"
                         style={{ textShadow: '0 0 50px rgba(214, 0, 255, 0.2)' }}>
-                        <span className="block text-white mb-2">MANJU</span>
-                        <span className="block text-white mb-2">D</span>
+                        <span className="text-white mb-2">MANJU D</span>
                     </div>
                     <div className="text-2xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary mt-4 tracking-wide">
                         CS STUDENT // SOFTWARE TECHIE
@@ -52,16 +61,14 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col md:flex-row items-center gap-6"
                 >
-                    <a href="#projects" className="group relative px-8 py-4 bg-primary text-black font-bold font-display tracking-widest text-lg overflow-hidden transition-all hover:scale-105 active:scale-95">
-                        <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                        <span className="relative flex items-center gap-2">
-                            VIEW PROJECTS <Terminal className="w-5 h-5" />
-                        </span>
-                        <div className="absolute inset-x-0 bottom-0 h-[2px] bg-white mix-blend-overlay" />
+
+
+                    <a href="#projects" className="px-8 py-4 border border-white/20 text-white font-bold font-display tracking-widest text-lg transition-all hover:bg-white/5 active:scale-95 flex items-center gap-2">
+                        PROJECTS <Terminal className="w-5 h-5" />
                     </a>
 
                     <a href="/resume.pdf" download="MANJU_D_Resume.pdf" className="px-8 py-4 border border-secondary text-secondary font-bold font-display tracking-widest text-lg transition-all hover:bg-secondary/10 hover:shadow-[0_0_20px_rgba(0,234,255,0.3)] active:scale-95 flex items-center gap-2">
-                        DOWNLOAD RESUME <ArrowRight className="w-5 h-5" />
+                        RESUME <ArrowRight className="w-5 h-5" />
                     </a>
                 </motion.div>
             </div>

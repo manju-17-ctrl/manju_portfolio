@@ -1,3 +1,28 @@
+import fs from "fs";
+const debugLog = fs.createWriteStream("debug_output.txt", { flags: "a" });
+const originalConsoleLog = console.log;
+const originalConsoleError = console.error;
+console.log = (...args) => {
+  debugLog.write("[LOG] " + args.join(" ") + "\n");
+  originalConsoleLog(...args);
+};
+console.error = (...args) => {
+  debugLog.write("[ERR] " + args.join(" ") + "\n");
+  originalConsoleError(...args);
+};
+const originalExit = process.exit;
+process.exit = (code?: number) => {
+  debugLog.write("[EXIT] Process exited with code " + code + "\n");
+  return originalExit(code);
+};
+process.on("uncaughtException", (err) => {
+  fs.writeFileSync("node_error.log", String(err.stack || err), "utf-8");
+  process.exit(1);
+});
+process.on("unhandledRejection", (err: any) => {
+  fs.writeFileSync("node_error.log", String(err?.stack || err), "utf-8");
+  process.exit(1);
+});
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
@@ -93,7 +118,7 @@ app.use((req, res, next) => {
   httpServer.listen(
     {
       port,
-      host: "localhost",
+      host: "0.0.0.0",
     },
     () => {
       log(`serving on port ${port}`);
