@@ -35,11 +35,15 @@ export const About = () => {
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                        <p className="text-lg text-muted-foreground leading-relaxed font-body mb-6 relative z-10">
-                            I am a motivated Computer Science student with a passion for building software that solves real-world problems.
-                            My journey involves mastering solid programming fundamentals and applying them in project-based experiences.
-                            I possess strong analytical and logical thinking skills and I am eager to learn and grow in a challenging technical environment.
-                        </p>
+                        <div className="flex flex-col sm:flex-row items-center gap-6 mb-6 relative z-10">
+                            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border-2 border-primary/40 shrink-0 shadow-[0_0_15px_rgba(0,243,255,0.2)]">
+                                <img src="/profile.jpg" alt="MANJU D" className="w-full h-full object-cover object-[center_15%]" />
+                            </div>
+                            <p className="text-lg text-muted-foreground leading-relaxed font-body">
+                                I am a motivated Computer Science student with a passion for building software that solves real-world problems.
+                                My journey involves mastering solid programming fundamentals and applying them in project-based experiences.
+                            </p>
+                        </div>
 
                         <div className="space-y-4 relative z-10">
                             <div className="flex items-center gap-4 text-white">

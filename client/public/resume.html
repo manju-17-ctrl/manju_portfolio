@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANJU D - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #0f172a;
+      color: #1e293b;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .toolbar {
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .toolbar a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .toolbar a:hover {
+      color: #38bdf8;
+    }
+    .btn-print {
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+    .btn-print:hover {
+      background-color: #0369a1;
+    }
+    .resume-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #0369a1;
+      margin-top: 0.2rem;
+    }
+    .meta-info {
+      font-size: 0.8rem;
+      color: #64748b;
+      text-align: right;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #475569;
+      font-weight: 500;
+    }
+    .contact-bar a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0369a1;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      font-size: 0.9rem;
+      color: #334155;
+    }
+    .edu-item, .proj-item {
+      margin-bottom: 1rem;
+    }
+    .edu-item:last-child, .proj-item:last-child {
+      margin-bottom: 0;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .item-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+    .item-sub {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-style: italic;
+    }
+    .item-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: #475569;
+    }
+    .score {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #0f172a;
+      margin-top: 0.1rem;
+    }
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.5rem;
+      font-size: 0.88rem;
+    }
+    .skill-label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    ul {
+      list-style-position: inside;
+      font-size: 0.88rem;
+      color: #334155;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    .tech-stack {
+      font-family: monospace;
+      font-size: 0.78rem;
+      color: #475569;
+      margin-top: 0.25rem;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .toolbar {
+        display: none;
+      }
+      .resume-card {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="/">← Back to Portfolio</a>
+    <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-card">
+    <header>
+      <div class="header-top" style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="/profile.jpg" alt="MANJU D" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; object-position: center 15%; border: 2px solid #0284c7;" />
+          <div>
+            <h1>MANJU D</h1>
+            <div class="subtitle">Software Engineering Aspirant</div>
+          </div>
+        </div>
+        <div class="meta-info">
+          <div>DOB: 2005-06-13</div>
+          <div>Nationality: Indian</div>
+        </div>
+      </div>
+      <div class="contact-bar">
+        <span>✉️ <a href="mailto:Manju539550560@gmail.com">Manju539550560@gmail.com</a></span>
+        <span>📞 <a href="tel:+919741308634">+91 9741308634</a></span>
+        <span>📍 India, Mysore</span>
+        <span>🔗 <a href="https://linkedin.com/in" target="_blank">linkedin.com/in</a></span>
+        <span>💻 <a href="https://github.com/manju-17-ctrl" target="_blank">github.com/manju-17-ctrl</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Computer Science and Engineering student seeking an entry-level software development opportunity. Passionate about learning, problem-solving, and building practical projects. Quick learner with a positive attitude and willingness to grow.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="item-header">
+          <div class="item-title">Bachelor of Engineering, COMPUTER SCIENCE & ENGINEERING</div>
+          <div class="item-date">2023 – 2025</div>
+        </div>
+        <div class="item-sub">Maharaja Institute of Technology, Mysore</div>
+        <div class="score">7th SEMESTER CGPA: 8.3</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="item-header">
+          <div class="item-title">PUC (Pre-University Course)</div>
+          <div class="item-date">2022 – 2023</div>
+        </div>
+        <div class="item-sub">MASVS GURUKULA PRE UNIVERSITY COLLEGE MYSORE</div>
+        <div class="score">Percentage: 93.2%</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="item-header">
+          <div class="item-title">S.S.L.C</div>
+          <div class="item-date">2021</div>
+        </div>
+        <div class="item-sub">Vivekananda English Medium School, Bannur</div>
+        <div class="score">Percentage: 87%</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skill-grid">
+        <div><span class="skill-label">Programming Languages:</span> Python, SQL, HTML, CSS</div>
+        <div><span class="skill-label">Frontend:</span> React.js, HTML5, Bootstrap</div>
+        <div><span class="skill-label">Backend:</span> Java, Flask</div>
+        <div><span class="skill-label">Tools:</span> Git, GitHub, VS Code</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications (Coursera)</h2>
+      <ul>
+        <li><strong>Programming with JavaScript</strong> – Meta (Coursera)</li>
+        <li><strong>Blockchain Basics</strong> – University at Buffalo (SUNY)</li>
+        <li><strong>Developing Front-End Apps with React</strong> – IBM</li>
+        <li><strong>Cyber Security Technologies</strong> — Illinois Tech</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="proj-item">
+        <div class="item-title">Event Management System</div>
+        <p>Developed a web-based Event Management System to simplify event planning and management. The system allows users to register, browse events, and book tickets, while administrators can create events, manage users, and generate reports.</p>
+        <div class="tech-stack"><strong>Built using:</strong> Python Flask, SQLite, HTML, CSS, JavaScript, Bootstrap, SQLAlchemy, and Firebase Authentication.</div>
+      </div>
+
+      <div class="proj-item" style="margin-top: 1rem;">
+        <div class="item-title">AegisFlow: Autonomous observability framework for industrial and software system</div>
+        <p>AI-powered observability platform that monitors both software systems and industrial machines in real time. It collects live system metrics, detects anomalies using AI agents, sends alerts, and performs automatic recovery actions. Provides a single dashboard for monitoring and helps reduce system downtime.</p>
+        <div class="tech-stack"><strong>Built using:</strong> Python, Django, Django REST Framework, React, HTML, CSS, JavaScript, SQLite, and psutil.</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

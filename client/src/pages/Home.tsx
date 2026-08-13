@@ -19,7 +19,7 @@ const Navbar = () => (
       <span className="text-primary ml-1">D</span>
     </div>
     <div className="hidden md:flex items-center space-x-6 text-xs font-medium tracking-widest text-gray-400">
-      {["HOME", "ABOUT", "EDUCATION", "SKILLS", "PROJECTS", "ACHIEVEMENTS", "CONTACT"].map((item) => (
+      {["HOME", "ABOUT", "EDUCATION", "SKILLS", "PROJECTS", "CERTIFICATIONS", "CONTACT"].map((item) => (
         <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-primary transition-colors cursor-pointer">
           {item}
         </a>

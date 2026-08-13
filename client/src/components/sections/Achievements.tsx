@@ -1,7 +1,35 @@
 import { motion } from "framer-motion";
-import { Trophy, Award } from "lucide-react";
+import { Trophy, Award, CheckCircle2 } from "lucide-react";
 
 export const Achievements = () => {
+    const certifications = [
+        {
+            title: "Programming with JavaScript",
+            issuer: "Meta (Coursera)",
+            category: "Frontend & Web Scripting"
+        },
+        {
+            title: "Blockchain Basics",
+            issuer: "University at Buffalo (SUNY)",
+            category: "Distributed Ledger Tech"
+        },
+        {
+            title: "Developing Front-End Apps with React",
+            issuer: "IBM (Coursera)",
+            category: "React Application Dev"
+        },
+        {
+            title: "Cyber Security Technologies",
+            issuer: "Illinois Tech (Coursera)",
+            category: "Information & Network Security"
+        },
+        {
+            title: "Python (Basics)",
+            issuer: "Ethnotech",
+            category: "Core Programming"
+        }
+    ];
+
     return (
         <section id="achievements" className="py-20 relative overflow-hidden">
             {/* Background decoration */}
@@ -15,47 +43,49 @@ export const Achievements = () => {
                     viewport={{ once: true }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">ACHIEVEMENTS</h2>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">CERTIFICATIONS</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Recognition received for technical innovation and problem solving.
+                        Professional certifications and specialized training verified across global institutions.
                     </p>
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
-                        className="p-1 rounded-2xl bg-gradient-to-r from-yellow-500/50 via-orange-500/50 to-yellow-500/50"
-                    >
-                        <div className="bg-black/90 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-                            <div className="p-6 bg-yellow-500/10 rounded-full ring-2 ring-yellow-500/50 shadow-[0_0_30px_rgba(234,179,8,0.2)]">
-                                <Trophy className="w-16 h-16 text-yellow-500" />
-                            </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    {certifications.map((cert, index) => (
+                        <motion.div
+                            key={cert.title}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.4, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="p-1 rounded-2xl bg-gradient-to-br from-yellow-500/30 via-amber-500/10 to-transparent hover:from-yellow-500/50 transition-all duration-300"
+                        >
+                            <div className="bg-black/90 rounded-xl p-6 h-full flex flex-col justify-between border border-white/10 hover:border-yellow-500/40 transition-colors">
+                                <div>
+                                    <div className="flex items-center justify-between gap-2 mb-4">
+                                        <div className="p-3 bg-yellow-500/10 rounded-lg">
+                                            <Trophy className="w-6 h-6 text-yellow-500" />
+                                        </div>
+                                        <span className="text-xs font-mono text-yellow-400/90 bg-yellow-500/10 px-2.5 py-1 rounded-full border border-yellow-500/20">
+                                            {cert.category}
+                                        </span>
+                                    </div>
 
-                            <div className="flex-1">
-                                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-2 justify-center md:justify-start">
-                                    <span className="text-yellow-500 font-bold tracking-widest text-sm border border-yellow-500/30 px-3 py-1 rounded-full bg-yellow-500/5 uppercase">
-                                        Certification
-                                    </span>
+                                    <h3 className="text-xl font-display font-bold text-white mb-2">
+                                        {cert.title}
+                                    </h3>
+                                    
+                                    <p className="text-secondary font-medium text-sm mb-4">
+                                        {cert.issuer}
+                                    </p>
                                 </div>
 
-                                <h3 className="text-3xl font-display font-bold text-white mb-4">
-                                    ETHNOTECH — Python (Basics)
-                                </h3>
-
-                                <p className="text-gray-400 leading-relaxed mb-6">
-                                    Certificate of completion for Python Basics. Skilled in developing frontend applications.
-                                </p>
-
-                                <div className="flex items-center gap-2 justify-center md:justify-start text-sm text-yellow-500/80">
-                                    <Award className="w-4 h-4" />
-                                    <span>Verified Certification</span>
+                                <div className="flex items-center gap-2 text-xs text-emerald-400 pt-4 border-t border-white/10 mt-2 font-mono">
+                                    <CheckCircle2 className="w-4 h-4" />
+                                    <span>VERIFIED CERTIFICATION</span>
                                 </div>
                             </div>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>

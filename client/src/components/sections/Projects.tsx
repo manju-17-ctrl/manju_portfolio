@@ -4,12 +4,22 @@ import { ExternalLink, Github, Database, Activity } from "lucide-react";
 export const Projects = () => {
     const projects = [
         {
-            title: "Frontend Application",
-            date: "Project",
-            description: "Developed a responsive frontend application using HTML, CSS, and modern web technologies. Focused on user interface design and experience.",
-            tags: ["HTML", "CSS", "Frontend"],
+            title: "AegisFlow: Autonomous Observability Framework",
+            subtitle: "Industrial & Software Monitoring System",
+            date: "Featured Project",
+            description: "AI-powered observability platform that monitors software systems and industrial machines in real time. It collects live system metrics, detects anomalies using AI agents, sends automated alerts, and performs automated self-healing/recovery actions to reduce system downtime.",
+            tags: ["Python", "Django", "Django REST", "React", "SQLite", "psutil", "AI Agents"],
             icon: Activity,
-            color: "from-blue-500 to-cyan-400"
+            color: "from-cyan-500 to-blue-600"
+        },
+        {
+            title: "Event Management System",
+            subtitle: "Web-Based Planning & Ticketing Platform",
+            date: "Web Application",
+            description: "A comprehensive web-based platform simplifying event planning and management. Enables users to register, browse upcoming events, and book tickets, while offering administrators robust tools to create events, manage users, and generate analytical reports.",
+            tags: ["Python Flask", "SQLite", "HTML/CSS", "JavaScript", "Bootstrap", "SQLAlchemy", "Firebase Auth"],
+            icon: Database,
+            color: "from-purple-500 to-indigo-600"
         }
     ];
 

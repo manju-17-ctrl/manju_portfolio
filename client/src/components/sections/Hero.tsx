@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+// Updated with user profile photo
 export const Hero = () => {
     return (
         <section id="home" className="min-h-screen flex flex-col md:flex-row justify-center items-center relative pt-20 container mx-auto px-4 gap-8 md:gap-16">
@@ -26,7 +27,7 @@ export const Hero = () => {
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                     </span>
                     <p className="text-primary font-mono tracking-widest text-sm md:text-base">
-                        SYSTEM ONLINE // FRESHER
+                        SYSTEM ONLINE // CS GRADUATE ASPIRANT
                     </p>
                 </motion.div>
 
@@ -41,7 +42,7 @@ export const Hero = () => {
                         <span className="text-white mb-2">MANJU D</span>
                     </div>
                     <div className="text-2xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary mt-4 tracking-wide">
-                        CS STUDENT // SOFTWARE TECHIE
+                        SOFTWARE ENGINEERING ASPIRANT
                     </div>
                 </motion.h1>
 
@@ -51,8 +52,7 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-muted-foreground max-w-2xl mb-12 text-lg font-light font-body"
                 >
-                    Motivated Computer Science student with solid programming fundamentals and project-based experience.
-                    Eager to learn and grow in a challenging technical environment.
+                    Computer Science & Engineering student passionate about full-stack development, AI-powered systems, and building high-performance web applications.
                 </motion.p>
 
                 <motion.div
@@ -61,14 +61,12 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col md:flex-row items-center gap-6"
                 >
-
-
                     <a href="#projects" className="px-8 py-4 border border-white/20 text-white font-bold font-display tracking-widest text-lg transition-all hover:bg-white/5 active:scale-95 flex items-center gap-2">
                         PROJECTS <Terminal className="w-5 h-5" />
                     </a>
 
-                    <a href="/resume.pdf" download="MANJU_D_Resume.pdf" className="px-8 py-4 border border-secondary text-secondary font-bold font-display tracking-widest text-lg transition-all hover:bg-secondary/10 hover:shadow-[0_0_20px_rgba(0,234,255,0.3)] active:scale-95 flex items-center gap-2">
-                        RESUME <ArrowRight className="w-5 h-5" />
+                    <a href="/resume" className="px-8 py-4 border border-secondary text-secondary font-bold font-display tracking-widest text-lg transition-all hover:bg-secondary/10 hover:shadow-[0_0_20px_rgba(0,234,255,0.3)] active:scale-95 flex items-center gap-2">
+                        VIEW RESUME <ArrowRight className="w-5 h-5" />
                     </a>
                 </motion.div>
             </div>
@@ -83,7 +81,7 @@ export const Hero = () => {
                     <img
                         src="/profile.jpg"
                         alt="MANJU D"
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover object-[center_15%] hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-primary/10 mix-blend-overlay hover:bg-transparent transition-colors" />
                 </div>

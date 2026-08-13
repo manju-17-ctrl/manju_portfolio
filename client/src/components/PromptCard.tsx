@@ -1,5 +1,7 @@
 import ReactMarkdown from "react-markdown";
+// @ts-ignore
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// @ts-ignore
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { motion } from "framer-motion";
 import { Copy, Download, FileJson, Terminal } from "lucide-react";

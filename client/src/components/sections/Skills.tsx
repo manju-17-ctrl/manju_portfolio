@@ -4,28 +4,36 @@ import { Code2, Cpu, Brain, Layout } from "lucide-react";
 export const Skills = () => {
     const skillCategories = [
         {
-            title: "Programming",
+            title: "Programming Languages",
             icon: Code2,
-            skills: ["Python (Basics)"],
+            skills: ["Python", "SQL", "Java", "HTML5 & CSS3"],
             color: "text-primary",
             borderColor: "border-primary/20",
             bgHover: "hover:bg-primary/5"
         },
         {
-            title: "Web Design",
+            title: "Frontend & Web",
             icon: Layout,
-            skills: ["HTML", "CSS", "Frontend Development"],
+            skills: ["React.js", "JavaScript", "HTML5", "Bootstrap", "Tailwind CSS"],
             color: "text-secondary",
             borderColor: "border-secondary/20",
             bgHover: "hover:bg-secondary/5"
         },
         {
-            title: "Languages",
+            title: "Backend & Databases",
+            icon: Cpu,
+            skills: ["Flask", "Django", "Django REST Framework", "SQLite", "SQLAlchemy", "Firebase"],
+            color: "text-emerald-400",
+            borderColor: "border-emerald-400/20",
+            bgHover: "hover:bg-emerald-400/5"
+        },
+        {
+            title: "Tools & Ecosystem",
             icon: Brain,
-            skills: ["English", "Kannada"],
-            color: "text-green-400",
-            borderColor: "border-green-400/20",
-            bgHover: "hover:bg-green-400/5"
+            skills: ["Git", "GitHub", "VS Code", "psutil"],
+            color: "text-purple-400",
+            borderColor: "border-purple-400/20",
+            bgHover: "hover:bg-purple-400/5"
         }
     ];
 
@@ -45,7 +53,7 @@ export const Skills = () => {
                     </div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {skillCategories.map((category, index) => (
                         <motion.div
                             key={category.title}

@@ -4,24 +4,24 @@ import { GraduationCap, Calendar } from "lucide-react";
 export const Education = () => {
     const education = [
         {
-            title: "Bachelor of Engineering [CSE]",
+            title: "Bachelor of Engineering (CSE)",
             institution: "Maharaja Institute of Technology, Mysore",
             period: "2023 – 2025",
             location: "Mysore",
-            score: "CGPA: 8.3",
+            score: "7th Sem CGPA: 8.3",
             current: true
         },
         {
-            title: "PUC",
-            institution: "MASVS GURUKULA PRE UNIVERSITY COLLEGE MYSORE",
+            title: "PUC (Pre-University Course)",
+            institution: "MASVS Gurukula Pre-University College",
             period: "2022 – 2023",
             location: "Mysore",
             score: "Percentage: 93.2%",
             current: false
         },
         {
-            title: "S.S.L.C",
-            institution: "Vivekananda English medium bannur",
+            title: "S.S.L.C (Secondary School Leaving Cert)",
+            institution: "Vivekananda English Medium School",
             period: "2021",
             location: "Bannur",
             score: "Percentage: 87%",
